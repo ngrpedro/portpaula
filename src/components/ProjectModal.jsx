@@ -18,16 +18,20 @@ import ImageGallery from "react-image-gallery";
 
 import bettmarq from "../assets/BetterMarketing.png";
 import LogoBM from "../assets/LogoBM.png";
-import project1 from "../assets/project1-1.png";
-import project2 from "../assets/project1-2.png";
-import project3 from "../assets/project1-3.png";
-import project4 from "../assets/project1-4.png";
+import project1 from "../assets/bettermark/Page 1.png";
+import project2 from "../assets/bettermark/Page 2.png";
+import project3 from "../assets/bettermark/Page 3.png";
+import project4 from "../assets/bettermark/Page 4.png";
+import project5 from "../assets/bettermark/Page 5.png";
+import project6 from "../assets/bettermark/Page 6.png";
 
-import mob1 from "../assets/mob1.png";
-import mob2 from "../assets/mob2.png";
-import mob3 from "../assets/mob3.png";
-import mob4 from "../assets/mob4.png";
-import mob5 from "../assets/mob5.png";
+import mob1 from "../assets/bettermark/Page 01.png";
+import mob2 from "../assets/bettermark/Page 02.png";
+import mob3 from "../assets/bettermark/Page 03.png";
+import mob4 from "../assets/bettermark/Page 04.png";
+import mob5 from "../assets/bettermark/Page 05.png";
+import mob6 from "../assets/bettermark/Page 06.png";
+import mob7 from "../assets/bettermark/Page 07.png";
 
 import { FigmaLogo, GoogleChromeLogo } from "phosphor-react";
 
@@ -49,6 +53,14 @@ const images = [
     thumbnail: project4,
   },
   {
+    original: project5,
+    thumbnail: project5,
+  },
+  {
+    original: project6,
+    thumbnail: project6,
+  },
+  {
     original: mob1,
     thumbnail: mob1,
   },
@@ -68,34 +80,40 @@ const images = [
     original: mob5,
     thumbnail: mob5,
   },
+  {
+    original: mob6,
+    thumbnail: mob6,
+  },
+  {
+    original: mob7,
+    thumbnail: mob7,
+  },
 ];
 
 const ProjectModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box
+      <Flex
         cursor={"pointer"}
         boxSize="xl"
         m="auto"
         onClick={onOpen}
-        className="group relative max-h-[380px]"
+        className="max-h-[380px] group"
+        direction={"column"}
+        gap="3"
       >
-        <div
-          className="p-4"
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            backdropFilter: "blur( 48px )",
-            backgroundColor: "transparent",
-          }}
-        >
-          <Heading>Better Marketing</Heading>
+        <div>
+          <Heading fontSize={"xl"} mt="2">
+            Better Marketing
+          </Heading>
         </div>
-        <Image src={bettmarq} alt="Dan Abramov" />
-      </Box>
+        <Image
+          src={bettmarq}
+          alt="Dan Abramov"
+          className="group-hover:opacity-80"
+        />
+      </Flex>
 
       <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
@@ -116,6 +134,9 @@ const ProjectModal = () => {
               </p>
               <Flex gap="5">
                 <Button
+                  as="a"
+                  href="https://www.bettermarketing.com.au/"
+                  target={"_blank"}
                   m="auto"
                   leftIcon={<GoogleChromeLogo size={28} />}
                   variant="outline"
@@ -129,11 +150,20 @@ const ProjectModal = () => {
                     borderColor: "#F56334",
                     color: "#F56334",
                   }}
+                  className="hover:scale-105"
+                  _active={{
+                    bg: "transparent",
+                    borderColor: "#F56334",
+                    color: "#F56334",
+                  }}
                 >
                   Acessar o site
                 </Button>
 
                 <Button
+                  as="a"
+                  href="https://www.figma.com/proto/LtnltfD7aYKWMBZzCMjUle/Better-marketing?node-id=23%3A58&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=167%3A215"
+                  target={"_blank"}
                   m="auto"
                   leftIcon={<FigmaLogo size={28} />}
                   variant="outline"
@@ -141,8 +171,14 @@ const ProjectModal = () => {
                   bg="transparent"
                   border="2px"
                   borderColor={"#098551"}
+                  className="hover:scale-105"
                   color={"#098551"}
                   _hover={{
+                    bg: "transparent",
+                    borderColor: "#098551",
+                    color: "#098551",
+                  }}
+                  _active={{
                     bg: "transparent",
                     borderColor: "#098551",
                     color: "#098551",
