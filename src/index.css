@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import "react-image-gallery/styles/css/image-gallery.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+body {
+  font-family: "Questrial", sans-serif;
+}
+
+.center-box {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
