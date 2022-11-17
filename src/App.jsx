@@ -58,7 +58,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex p-4 md:px-8 gap-8 items-center justify-center mb-20">
+      <div className="flex flex-col md:flex-row p-4 md:px-8 gap-8 items-center justify-center mb-20">
         <ProjectModal />
 
         <ProjectModalGreen />
