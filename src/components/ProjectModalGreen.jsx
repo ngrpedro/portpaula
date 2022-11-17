@@ -10,28 +10,17 @@ import {
   Button,
   useDisclosure,
   Image,
-  Box,
   Flex,
   Heading,
 } from "@chakra-ui/react";
 import ImageGallery from "react-image-gallery";
 
 import bettmarq from "../assets/BetterMarketing.png";
-import LogoBM from "../assets/LogoBM.png";
-import project1 from "../assets/bettermark/Page 1.png";
-import project2 from "../assets/bettermark/Page 2.png";
-import project3 from "../assets/bettermark/Page 3.png";
-import project4 from "../assets/bettermark/Page 4.png";
-import project5 from "../assets/bettermark/Page 5.png";
-import project6 from "../assets/bettermark/Page 6.png";
 
-import mob1 from "../assets/bettermark/Page 01.png";
-import mob2 from "../assets/bettermark/Page 02.png";
-import mob3 from "../assets/bettermark/Page 03.png";
-import mob4 from "../assets/bettermark/Page 04.png";
-import mob5 from "../assets/bettermark/Page 05.png";
-import mob6 from "../assets/bettermark/Page 06.png";
-import mob7 from "../assets/bettermark/Page 07.png";
+import logo from "../assets/green/green_logo.png";
+import project1 from "../assets/green/page1.png";
+import project2 from "../assets/green/page2.png";
+import project3 from "../assets/green/page3.png";
 
 import { FigmaLogo, GoogleChromeLogo } from "phosphor-react";
 
@@ -48,49 +37,9 @@ const images = [
     original: project3,
     thumbnail: project3,
   },
-  {
-    original: project4,
-    thumbnail: project4,
-  },
-  {
-    original: project5,
-    thumbnail: project5,
-  },
-  {
-    original: project6,
-    thumbnail: project6,
-  },
-  {
-    original: mob1,
-    thumbnail: mob1,
-  },
-  {
-    original: mob2,
-    thumbnail: mob2,
-  },
-  {
-    original: mob3,
-    thumbnail: mob3,
-  },
-  {
-    original: mob4,
-    thumbnail: mob4,
-  },
-  {
-    original: mob5,
-    thumbnail: mob5,
-  },
-  {
-    original: mob6,
-    thumbnail: mob6,
-  },
-  {
-    original: mob7,
-    thumbnail: mob7,
-  },
 ];
 
-const ProjectModal = () => {
+const ProjectModalGreen = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -99,17 +48,17 @@ const ProjectModal = () => {
         boxSize="xl"
         m="auto"
         onClick={onOpen}
-        className="max-h-[400px] object-cover overflow-hidden group"
+        className="max-h-[380px] object-cover overflow-hidden group"
         direction={"column"}
         gap="3"
       >
         <div>
           <Heading fontSize={"xl"} mt="2">
-            Better Marketing
+            Green
           </Heading>
         </div>
         <Image
-          src={bettmarq}
+          src={project1}
           alt="Dan Abramov"
           className="group-hover:opacity-80"
         />
@@ -119,7 +68,7 @@ const ProjectModal = () => {
         <ModalOverlay />
         <ModalContent bg="#2B2B2B" color="white">
           <ModalHeader>
-            <Image src={LogoBM} w="100px" />
+            <Image src={logo} w="100px" />
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
@@ -197,4 +146,4 @@ const ProjectModal = () => {
   );
 };
 
-export default ProjectModal;
+export default ProjectModalGreen;

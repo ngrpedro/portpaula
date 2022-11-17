@@ -4,6 +4,7 @@ import { useState } from "react";
 import bettmarq from "./assets/BetterMarketing.png";
 import Green from "./assets/Green.png";
 import ProjectModal from "./components/ProjectModal";
+import ProjectModalGreen from "./components/ProjectModalGreen";
 
 function App() {
   return (
@@ -57,10 +58,10 @@ function App() {
         </div>
       </div>
 
-      <div className="flex p-4 md:px-8 gap-8 items-center justify-center">
+      <div className="flex p-4 md:px-8 gap-8 items-center justify-center mb-20">
         <ProjectModal />
 
-        <ProjectModal />
+        <ProjectModalGreen />
       </div>
     </div>
   );
