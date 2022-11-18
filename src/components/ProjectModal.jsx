@@ -99,9 +99,11 @@ const ProjectModal = () => {
         boxSize="xl"
         m="auto"
         onClick={onOpen}
-        className="max-h-[400px] object-cover overflow-hidden group"
+        className="object-cover overflow-hidden group"
         direction={"column"}
         gap="3"
+        maxWidth={["20rem", "30rem", "40rem"]}
+        maxHeight={["20rem", "30rem", "28rem"]}
       >
         <div>
           <Heading fontSize={"xl"} mt="2">
@@ -112,10 +114,13 @@ const ProjectModal = () => {
           src={bettmarq}
           alt="Dan Abramov"
           className="group-hover:opacity-80"
+          maxWidth={["20rem", "30rem", "40rem"]}
+          maxHeight={["20rem", "30rem", "40rem"]}
+          objectFit="cover"
         />
       </Flex>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal isOpen={isOpen} onClose={onClose} size={["xs", "md", "xl"]}>
         <ModalOverlay />
         <ModalContent bg="#2B2B2B" color="white">
           <ModalHeader>
@@ -132,7 +137,7 @@ const ProjectModal = () => {
                 utilizamos figuras e ícones para contrastar com a grande
                 quantidade de textos.
               </p>
-              <Flex gap="5">
+              <Flex gap="5" flexWrap={"wrap"}>
                 <Button
                   as="a"
                   href="https://www.bettermarketing.com.au/"

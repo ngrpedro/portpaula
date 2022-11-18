@@ -15,9 +15,8 @@ import {
 } from "@chakra-ui/react";
 import ImageGallery from "react-image-gallery";
 
-import bettmarq from "../assets/BetterMarketing.png";
-
 import logo from "../assets/green/green_logo.png";
+import mockup from "../assets/green/Green_mockup.png";
 import project1 from "../assets/green/page1.png";
 import project2 from "../assets/green/page2.png";
 import project3 from "../assets/green/page3.png";
@@ -51,6 +50,8 @@ const ProjectModalGreen = () => {
         className="max-h-[380px] object-cover overflow-hidden group"
         direction={"column"}
         gap="3"
+        maxWidth={["20rem", "30rem", "40rem"]}
+        maxHeight={["20rem", "30rem", "28rem"]}
       >
         <div>
           <Heading fontSize={"xl"} mt="2">
@@ -58,9 +59,11 @@ const ProjectModalGreen = () => {
           </Heading>
         </div>
         <Image
-          src={project1}
+          src={mockup}
           alt="Dan Abramov"
           className="group-hover:opacity-80"
+          maxWidth={["20rem", "30rem", "40rem"]}
+          maxHeight={["20rem", "30rem", "40rem"]}
         />
       </Flex>
 
@@ -74,44 +77,15 @@ const ProjectModalGreen = () => {
           <ModalBody>
             <div className="mb-8 space-y-5">
               <p className="text-justify">
-                A interface do website institucional Better Marketing foi
-                desenvolvida para transmitir credibilidade, profissionalismo e
-                solidez - características presentes em todas as estratégias da
-                empresa australiana. A cliente dispensou o uso de fotos, então
-                utilizamos figuras e ícones para contrastar com a grande
-                quantidade de textos.
+                Desenvolvi a interface do website Green para testar algumas
+                funcionalidades no Figma, como o efeito BLUR na barra de
+                navegação fixa. Embora fictício, o portal Green tem uma
+                estrutura minimalista e sofisticada.
               </p>
               <Flex gap="5">
                 <Button
                   as="a"
-                  href="https://www.bettermarketing.com.au/"
-                  target={"_blank"}
-                  m="auto"
-                  leftIcon={<GoogleChromeLogo size={28} />}
-                  variant="outline"
-                  rounded="full"
-                  bg="transparent"
-                  border="2px"
-                  borderColor={"#F56334"}
-                  color={"#F56334"}
-                  _hover={{
-                    bg: "transparent",
-                    borderColor: "#F56334",
-                    color: "#F56334",
-                  }}
-                  className="hover:scale-105"
-                  _active={{
-                    bg: "transparent",
-                    borderColor: "#F56334",
-                    color: "#F56334",
-                  }}
-                >
-                  Acessar o site
-                </Button>
-
-                <Button
-                  as="a"
-                  href="https://www.figma.com/proto/LtnltfD7aYKWMBZzCMjUle/Better-marketing?node-id=23%3A58&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=167%3A215"
+                  href="https://www.figma.com/proto/amq6nMBxQjMZDBjpu8pCxL/Green-site?node-id=106%3A247&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=106%3A247&show-proto-sidebar=1"
                   target={"_blank"}
                   m="auto"
                   leftIcon={<FigmaLogo size={28} />}
