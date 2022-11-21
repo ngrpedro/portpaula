@@ -11,10 +11,12 @@ import bettmarq from "./assets/BetterMarketing.png";
 import Green from "./assets/Green.png";
 import ProjectModal from "./components/ProjectModal";
 import ProjectModalGreen from "./components/ProjectModalGreen";
+import ProjectModalLotus from "./components/ProjectModalLotus";
 
 import pdf1 from "./assets/pdf/Curriculo_PaulaSantos.pdf";
 
 import paulinha from "./assets/paulinha.jpg";
+import ProjectModalTurism from "./components/ProjectModalTurism";
 
 function App() {
   return (
@@ -84,7 +86,7 @@ function App() {
           </p>
           <br />
           <span>
-            <strong>Portfólio em contrução </strong>
+            <strong>Portfólio em construção </strong>
             <br />
             Veja alguns projetos:
           </span>
@@ -101,9 +103,11 @@ function App() {
       </div>
 
       <Box
-        className="flex flex-col lg:flex-row p-4 md:px-8 gap-8 items-center justify-center "
+        className="grid grid-cols-1 lg:grid-cols-2 p-4 md:px-8 gap-8 items-center justify-center "
         maxHeight={["36rem", "47rem", "56rem"]}
       >
+        <ProjectModalTurism />
+        <ProjectModalLotus />
         <ProjectModal />
         <ProjectModalGreen />
       </Box>
