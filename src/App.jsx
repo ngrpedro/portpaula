@@ -108,8 +108,8 @@ function App() {
       >
         <ProjectModalTurism />
         <ProjectModalLotus />
-        <ProjectModal />
-        <ProjectModalGreen />
+        {/*   <ProjectModal />
+        <ProjectModalGreen /> */}
       </Box>
     </div>
   );
