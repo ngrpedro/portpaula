@@ -12,6 +12,7 @@ import Green from "./assets/Green.png";
 import ProjectModal from "./components/ProjectModal";
 import ProjectModalGreen from "./components/ProjectModalGreen";
 import ProjectModalLotus from "./components/ProjectModalLotus";
+import ProjectModalChinaFood from "./components/ProjectModalChinaFood";
 
 import pdf1 from "./assets/pdf/Curriculo_PaulaSantos.pdf";
 
@@ -106,6 +107,7 @@ function App() {
         className="grid grid-cols-1 lg:grid-cols-2 p-4 md:px-8 gap-8 items-center justify-center "
         maxHeight={["36rem", "47rem", "56rem"]}
       >
+        <ProjectModalChinaFood />
         <ProjectModalTurism />
         <ProjectModalLotus />
         {/*   <ProjectModal />
